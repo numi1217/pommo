@@ -1,0 +1,1252 @@
+- !<AnimationAsset/9c7804a0-33d0-4e57-b662-4d948d9d29f3>
+  PackagePath: ""
+  AnimationPropertiesLayers:
+    {}
+  AnimationCurvePropertiesLayers:
+    Cube.002:
+      properties:
+        - Position:
+            - X:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: -0.424783
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: -0.424783}
+                      outControlWeight: {x: 0.000000, y: -0.424783}
+                  - time: 1.500000
+                    value:
+                      data: -0.424783
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: -0.424783}
+                      outControlWeight: {x: 1.500000, y: -0.424783}
+            - Y:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.154153
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.154153}
+                      outControlWeight: {x: 0.000000, y: 0.154153}
+                  - time: 1.500000
+                    value:
+                      data: 0.154153
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.154153}
+                      outControlWeight: {x: 1.500000, y: 0.154153}
+            - Z:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.002787
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.002787}
+                      outControlWeight: {x: 0.000000, y: 0.002787}
+                  - time: 1.500000
+                    value:
+                      data: 0.002787
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.002787}
+                      outControlWeight: {x: 1.500000, y: 0.002787}
+        - Rotation:
+            - W:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.999990
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.999990}
+                      outControlWeight: {x: 0.000000, y: 0.999990}
+                  - time: 0.041667
+                    value:
+                      data: 0.999990
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.041667, y: 0.999990}
+                      outControlWeight: {x: 0.041667, y: 0.999990}
+                  - time: 0.083333
+                    value:
+                      data: 0.999972
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.083333, y: 0.999972}
+                      outControlWeight: {x: 0.083333, y: 0.999972}
+                  - time: 0.125000
+                    value:
+                      data: 0.999865
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.125000, y: 0.999865}
+                      outControlWeight: {x: 0.125000, y: 0.999865}
+                  - time: 0.166667
+                    value:
+                      data: 0.999526
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.166667, y: 0.999526}
+                      outControlWeight: {x: 0.166667, y: 0.999526}
+                  - time: 0.208333
+                    value:
+                      data: 0.998737
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.208333, y: 0.998737}
+                      outControlWeight: {x: 0.208333, y: 0.998737}
+                  - time: 0.250000
+                    value:
+                      data: 0.997225
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.250000, y: 0.997225}
+                      outControlWeight: {x: 0.250000, y: 0.997225}
+                  - time: 0.291667
+                    value:
+                      data: 0.994679
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.291667, y: 0.994679}
+                      outControlWeight: {x: 0.291667, y: 0.994679}
+                  - time: 0.333333
+                    value:
+                      data: 0.990772
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.333333, y: 0.990772}
+                      outControlWeight: {x: 0.333333, y: 0.990772}
+                  - time: 0.375000
+                    value:
+                      data: 0.985173
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.375000, y: 0.985173}
+                      outControlWeight: {x: 0.375000, y: 0.985173}
+                  - time: 0.416667
+                    value:
+                      data: 0.977560
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.416667, y: 0.977560}
+                      outControlWeight: {x: 0.416667, y: 0.977560}
+                  - time: 0.458333
+                    value:
+                      data: 0.967644
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.458333, y: 0.967644}
+                      outControlWeight: {x: 0.458333, y: 0.967644}
+                  - time: 0.500000
+                    value:
+                      data: 0.955170
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.500000, y: 0.955170}
+                      outControlWeight: {x: 0.500000, y: 0.955170}
+                  - time: 0.541667
+                    value:
+                      data: 0.939938
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.541667, y: 0.939938}
+                      outControlWeight: {x: 0.541667, y: 0.939938}
+                  - time: 0.583333
+                    value:
+                      data: 0.921808
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.583333, y: 0.921808}
+                      outControlWeight: {x: 0.583333, y: 0.921808}
+                  - time: 0.625000
+                    value:
+                      data: 0.900709
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.625000, y: 0.900709}
+                      outControlWeight: {x: 0.625000, y: 0.900709}
+                  - time: 0.666667
+                    value:
+                      data: 0.876642
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.666667, y: 0.876642}
+                      outControlWeight: {x: 0.666667, y: 0.876642}
+                  - time: 0.708333
+                    value:
+                      data: 0.849688
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.708333, y: 0.849688}
+                      outControlWeight: {x: 0.708333, y: 0.849688}
+                  - time: 0.833333
+                    value:
+                      data: 0.753449
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.833333, y: 0.753449}
+                      outControlWeight: {x: 0.833333, y: 0.753449}
+                  - time: 0.875000
+                    value:
+                      data: 0.717250
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.875000, y: 0.717250}
+                      outControlWeight: {x: 0.875000, y: 0.717250}
+                  - time: 0.916667
+                    value:
+                      data: 0.679652
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.916667, y: 0.679652}
+                      outControlWeight: {x: 0.916667, y: 0.679652}
+                  - time: 0.958333
+                    value:
+                      data: 0.641128
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.958333, y: 0.641128}
+                      outControlWeight: {x: 0.958333, y: 0.641128}
+                  - time: 1.000000
+                    value:
+                      data: 0.602186
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.000000, y: 0.602186}
+                      outControlWeight: {x: 1.000000, y: 0.602186}
+                  - time: 1.041667
+                    value:
+                      data: 0.563364
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.041667, y: 0.563364}
+                      outControlWeight: {x: 1.041667, y: 0.563364}
+                  - time: 1.083333
+                    value:
+                      data: 0.525215
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.083333, y: 0.525215}
+                      outControlWeight: {x: 1.083333, y: 0.525215}
+                  - time: 1.125000
+                    value:
+                      data: 0.488295
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.125000, y: 0.488295}
+                      outControlWeight: {x: 1.125000, y: 0.488295}
+                  - time: 1.166667
+                    value:
+                      data: 0.453162
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.166667, y: 0.453162}
+                      outControlWeight: {x: 1.166667, y: 0.453162}
+                  - time: 1.208333
+                    value:
+                      data: 0.420363
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.208333, y: 0.420363}
+                      outControlWeight: {x: 1.208333, y: 0.420363}
+                  - time: 1.250000
+                    value:
+                      data: 0.390426
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.250000, y: 0.390426}
+                      outControlWeight: {x: 1.250000, y: 0.390426}
+                  - time: 1.291667
+                    value:
+                      data: 0.363863
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.291667, y: 0.363863}
+                      outControlWeight: {x: 1.291667, y: 0.363863}
+                  - time: 1.333333
+                    value:
+                      data: 0.341161
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.333333, y: 0.341161}
+                      outControlWeight: {x: 1.333333, y: 0.341161}
+                  - time: 1.375000
+                    value:
+                      data: 0.322781
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.375000, y: 0.322781}
+                      outControlWeight: {x: 1.375000, y: 0.322781}
+                  - time: 1.416667
+                    value:
+                      data: 0.309161
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.416667, y: 0.309161}
+                      outControlWeight: {x: 1.416667, y: 0.309161}
+                  - time: 1.458333
+                    value:
+                      data: 0.300710
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.458333, y: 0.300710}
+                      outControlWeight: {x: 1.458333, y: 0.300710}
+                  - time: 1.500000
+                    value:
+                      data: 0.297813
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.297813}
+                      outControlWeight: {x: 1.500000, y: 0.297813}
+            - X:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: -0.004511
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: -0.004511}
+                      outControlWeight: {x: 0.000000, y: -0.004511}
+                  - time: 0.041667
+                    value:
+                      data: -0.004511
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.041667, y: -0.004511}
+                      outControlWeight: {x: 0.041667, y: -0.004511}
+                  - time: 0.083333
+                    value:
+                      data: -0.007547
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.083333, y: -0.007547}
+                      outControlWeight: {x: 0.083333, y: -0.007547}
+                  - time: 0.125000
+                    value:
+                      data: -0.016420
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.125000, y: -0.016420}
+                      outControlWeight: {x: 0.125000, y: -0.016420}
+                  - time: 0.166667
+                    value:
+                      data: -0.030771
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.166667, y: -0.030771}
+                      outControlWeight: {x: 0.166667, y: -0.030771}
+                  - time: 0.208333
+                    value:
+                      data: -0.050240
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.208333, y: -0.050240}
+                      outControlWeight: {x: 0.208333, y: -0.050240}
+                  - time: 0.250000
+                    value:
+                      data: -0.074453
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.250000, y: -0.074453}
+                      outControlWeight: {x: 0.250000, y: -0.074453}
+                  - time: 0.291667
+                    value:
+                      data: -0.103022
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.291667, y: -0.103022}
+                      outControlWeight: {x: 0.291667, y: -0.103022}
+                  - time: 0.333333
+                    value:
+                      data: -0.135537
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.333333, y: -0.135537}
+                      outControlWeight: {x: 0.333333, y: -0.135537}
+                  - time: 0.375000
+                    value:
+                      data: -0.171567
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.375000, y: -0.171567}
+                      outControlWeight: {x: 0.375000, y: -0.171567}
+                  - time: 0.416667
+                    value:
+                      data: -0.210655
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.416667, y: -0.210655}
+                      outControlWeight: {x: 0.416667, y: -0.210655}
+                  - time: 0.458333
+                    value:
+                      data: -0.252320
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.458333, y: -0.252320}
+                      outControlWeight: {x: 0.458333, y: -0.252320}
+                  - time: 0.500000
+                    value:
+                      data: -0.296057
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.500000, y: -0.296057}
+                      outControlWeight: {x: 0.500000, y: -0.296057}
+                  - time: 0.541667
+                    value:
+                      data: -0.341344
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.541667, y: -0.341344}
+                      outControlWeight: {x: 0.541667, y: -0.341344}
+                  - time: 0.583333
+                    value:
+                      data: -0.387646
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.583333, y: -0.387646}
+                      outControlWeight: {x: 0.583333, y: -0.387646}
+                  - time: 0.625000
+                    value:
+                      data: -0.434424
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.625000, y: -0.434424}
+                      outControlWeight: {x: 0.625000, y: -0.434424}
+                  - time: 0.666667
+                    value:
+                      data: -0.481143
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.666667, y: -0.481143}
+                      outControlWeight: {x: 0.666667, y: -0.481143}
+                  - time: 0.708333
+                    value:
+                      data: -0.527285
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.708333, y: -0.527285}
+                      outControlWeight: {x: 0.708333, y: -0.527285}
+                  - time: 0.833333
+                    value:
+                      data: -0.657506
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.833333, y: -0.657506}
+                      outControlWeight: {x: 0.833333, y: -0.657506}
+                  - time: 0.875000
+                    value:
+                      data: -0.696816
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.875000, y: -0.696816}
+                      outControlWeight: {x: 0.875000, y: -0.696816}
+                  - time: 0.916667
+                    value:
+                      data: -0.733535
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.916667, y: -0.733535}
+                      outControlWeight: {x: 0.916667, y: -0.733535}
+                  - time: 0.958333
+                    value:
+                      data: -0.767434
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.958333, y: -0.767434}
+                      outControlWeight: {x: 0.958333, y: -0.767434}
+                  - time: 1.000000
+                    value:
+                      data: -0.798356
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.000000, y: -0.798356}
+                      outControlWeight: {x: 1.000000, y: -0.798356}
+                  - time: 1.041667
+                    value:
+                      data: -0.826209
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.041667, y: -0.826209}
+                      outControlWeight: {x: 1.041667, y: -0.826209}
+                  - time: 1.083333
+                    value:
+                      data: -0.850970
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.083333, y: -0.850970}
+                      outControlWeight: {x: 1.083333, y: -0.850970}
+                  - time: 1.125000
+                    value:
+                      data: -0.872679
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.125000, y: -0.872679}
+                      outControlWeight: {x: 1.125000, y: -0.872679}
+                  - time: 1.166667
+                    value:
+                      data: -0.891428
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.166667, y: -0.891428}
+                      outControlWeight: {x: 1.166667, y: -0.891428}
+                  - time: 1.208333
+                    value:
+                      data: -0.907356
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.208333, y: -0.907356}
+                      outControlWeight: {x: 1.208333, y: -0.907356}
+                  - time: 1.250000
+                    value:
+                      data: -0.920634
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.250000, y: -0.920634}
+                      outControlWeight: {x: 1.250000, y: -0.920634}
+                  - time: 1.291667
+                    value:
+                      data: -0.931452
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.291667, y: -0.931452}
+                      outControlWeight: {x: 1.291667, y: -0.931452}
+                  - time: 1.333333
+                    value:
+                      data: -0.940005
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.333333, y: -0.940005}
+                      outControlWeight: {x: 1.333333, y: -0.940005}
+                  - time: 1.375000
+                    value:
+                      data: -0.946474
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.375000, y: -0.946474}
+                      outControlWeight: {x: 1.375000, y: -0.946474}
+                  - time: 1.416667
+                    value:
+                      data: -0.951010
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.416667, y: -0.951010}
+                      outControlWeight: {x: 1.416667, y: -0.951010}
+                  - time: 1.458333
+                    value:
+                      data: -0.953716
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.458333, y: -0.953716}
+                      outControlWeight: {x: 1.458333, y: -0.953716}
+                  - time: 1.500000
+                    value:
+                      data: -0.954624
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: -0.954624}
+                      outControlWeight: {x: 1.500000, y: -0.954624}
+            - Y:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.000000}
+                      outControlWeight: {x: 0.000000, y: 0.000000}
+                  - time: 0.041667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.041667, y: 0.000000}
+                      outControlWeight: {x: 0.041667, y: 0.000000}
+                  - time: 0.083333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.083333, y: 0.000000}
+                      outControlWeight: {x: 0.083333, y: 0.000000}
+                  - time: 0.125000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.125000, y: 0.000000}
+                      outControlWeight: {x: 0.125000, y: 0.000000}
+                  - time: 0.166667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.166667, y: 0.000000}
+                      outControlWeight: {x: 0.166667, y: 0.000000}
+                  - time: 0.208333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.208333, y: 0.000000}
+                      outControlWeight: {x: 0.208333, y: 0.000000}
+                  - time: 0.250000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.250000, y: 0.000000}
+                      outControlWeight: {x: 0.250000, y: 0.000000}
+                  - time: 0.291667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.291667, y: 0.000000}
+                      outControlWeight: {x: 0.291667, y: 0.000000}
+                  - time: 0.333333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.333333, y: 0.000000}
+                      outControlWeight: {x: 0.333333, y: 0.000000}
+                  - time: 0.375000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.375000, y: 0.000000}
+                      outControlWeight: {x: 0.375000, y: 0.000000}
+                  - time: 0.416667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.416667, y: 0.000000}
+                      outControlWeight: {x: 0.416667, y: 0.000000}
+                  - time: 0.458333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.458333, y: 0.000000}
+                      outControlWeight: {x: 0.458333, y: 0.000000}
+                  - time: 0.500000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.500000, y: 0.000000}
+                      outControlWeight: {x: 0.500000, y: 0.000000}
+                  - time: 0.541667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.541667, y: 0.000000}
+                      outControlWeight: {x: 0.541667, y: 0.000000}
+                  - time: 0.583333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.583333, y: 0.000000}
+                      outControlWeight: {x: 0.583333, y: 0.000000}
+                  - time: 0.625000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.625000, y: 0.000000}
+                      outControlWeight: {x: 0.625000, y: 0.000000}
+                  - time: 0.666667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.666667, y: 0.000000}
+                      outControlWeight: {x: 0.666667, y: 0.000000}
+                  - time: 0.708333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.708333, y: 0.000000}
+                      outControlWeight: {x: 0.708333, y: 0.000000}
+                  - time: 0.833333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.833333, y: 0.000000}
+                      outControlWeight: {x: 0.833333, y: 0.000000}
+                  - time: 0.875000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.875000, y: 0.000000}
+                      outControlWeight: {x: 0.875000, y: 0.000000}
+                  - time: 0.916667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.916667, y: -0.000000}
+                      outControlWeight: {x: 0.916667, y: -0.000000}
+                  - time: 0.958333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.958333, y: -0.000000}
+                      outControlWeight: {x: 0.958333, y: -0.000000}
+                  - time: 1.000000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.000000, y: -0.000000}
+                      outControlWeight: {x: 1.000000, y: -0.000000}
+                  - time: 1.041667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.041667, y: -0.000000}
+                      outControlWeight: {x: 1.041667, y: -0.000000}
+                  - time: 1.083333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.083333, y: -0.000000}
+                      outControlWeight: {x: 1.083333, y: -0.000000}
+                  - time: 1.125000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.125000, y: -0.000000}
+                      outControlWeight: {x: 1.125000, y: -0.000000}
+                  - time: 1.166667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.166667, y: -0.000000}
+                      outControlWeight: {x: 1.166667, y: -0.000000}
+                  - time: 1.208333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.208333, y: -0.000000}
+                      outControlWeight: {x: 1.208333, y: -0.000000}
+                  - time: 1.250000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.250000, y: -0.000000}
+                      outControlWeight: {x: 1.250000, y: -0.000000}
+                  - time: 1.291667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.291667, y: -0.000000}
+                      outControlWeight: {x: 1.291667, y: -0.000000}
+                  - time: 1.333333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.333333, y: -0.000000}
+                      outControlWeight: {x: 1.333333, y: -0.000000}
+                  - time: 1.375000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.375000, y: -0.000000}
+                      outControlWeight: {x: 1.375000, y: -0.000000}
+                  - time: 1.416667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.416667, y: -0.000000}
+                      outControlWeight: {x: 1.416667, y: -0.000000}
+                  - time: 1.458333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.458333, y: -0.000000}
+                      outControlWeight: {x: 1.458333, y: -0.000000}
+                  - time: 1.500000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: -0.000000}
+                      outControlWeight: {x: 1.500000, y: -0.000000}
+            - Z:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: -0.000000}
+                      outControlWeight: {x: 0.000000, y: -0.000000}
+                  - time: 0.041667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.041667, y: -0.000000}
+                      outControlWeight: {x: 0.041667, y: -0.000000}
+                  - time: 0.083333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.083333, y: -0.000000}
+                      outControlWeight: {x: 0.083333, y: -0.000000}
+                  - time: 0.125000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.125000, y: -0.000000}
+                      outControlWeight: {x: 0.125000, y: -0.000000}
+                  - time: 0.166667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.166667, y: -0.000000}
+                      outControlWeight: {x: 0.166667, y: -0.000000}
+                  - time: 0.208333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.208333, y: -0.000000}
+                      outControlWeight: {x: 0.208333, y: -0.000000}
+                  - time: 0.250000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.250000, y: -0.000000}
+                      outControlWeight: {x: 0.250000, y: -0.000000}
+                  - time: 0.291667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.291667, y: -0.000000}
+                      outControlWeight: {x: 0.291667, y: -0.000000}
+                  - time: 0.333333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.333333, y: -0.000000}
+                      outControlWeight: {x: 0.333333, y: -0.000000}
+                  - time: 0.375000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.375000, y: -0.000000}
+                      outControlWeight: {x: 0.375000, y: -0.000000}
+                  - time: 0.416667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.416667, y: -0.000000}
+                      outControlWeight: {x: 0.416667, y: -0.000000}
+                  - time: 0.458333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.458333, y: -0.000000}
+                      outControlWeight: {x: 0.458333, y: -0.000000}
+                  - time: 0.500000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.500000, y: -0.000000}
+                      outControlWeight: {x: 0.500000, y: -0.000000}
+                  - time: 0.541667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.541667, y: -0.000000}
+                      outControlWeight: {x: 0.541667, y: -0.000000}
+                  - time: 0.583333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.583333, y: -0.000000}
+                      outControlWeight: {x: 0.583333, y: -0.000000}
+                  - time: 0.625000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.625000, y: -0.000000}
+                      outControlWeight: {x: 0.625000, y: -0.000000}
+                  - time: 0.666667
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.666667, y: -0.000000}
+                      outControlWeight: {x: 0.666667, y: -0.000000}
+                  - time: 0.708333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.708333, y: -0.000000}
+                      outControlWeight: {x: 0.708333, y: -0.000000}
+                  - time: 0.833333
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.833333, y: -0.000000}
+                      outControlWeight: {x: 0.833333, y: -0.000000}
+                  - time: 0.875000
+                    value:
+                      data: -0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.875000, y: -0.000000}
+                      outControlWeight: {x: 0.875000, y: -0.000000}
+                  - time: 0.916667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.916667, y: 0.000000}
+                      outControlWeight: {x: 0.916667, y: 0.000000}
+                  - time: 0.958333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.958333, y: 0.000000}
+                      outControlWeight: {x: 0.958333, y: 0.000000}
+                  - time: 1.000000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.000000, y: 0.000000}
+                      outControlWeight: {x: 1.000000, y: 0.000000}
+                  - time: 1.041667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.041667, y: 0.000000}
+                      outControlWeight: {x: 1.041667, y: 0.000000}
+                  - time: 1.083333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.083333, y: 0.000000}
+                      outControlWeight: {x: 1.083333, y: 0.000000}
+                  - time: 1.125000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.125000, y: 0.000000}
+                      outControlWeight: {x: 1.125000, y: 0.000000}
+                  - time: 1.166667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.166667, y: 0.000000}
+                      outControlWeight: {x: 1.166667, y: 0.000000}
+                  - time: 1.208333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.208333, y: 0.000000}
+                      outControlWeight: {x: 1.208333, y: 0.000000}
+                  - time: 1.250000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.250000, y: 0.000000}
+                      outControlWeight: {x: 1.250000, y: 0.000000}
+                  - time: 1.291667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.291667, y: 0.000000}
+                      outControlWeight: {x: 1.291667, y: 0.000000}
+                  - time: 1.333333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.333333, y: 0.000000}
+                      outControlWeight: {x: 1.333333, y: 0.000000}
+                  - time: 1.375000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.375000, y: 0.000000}
+                      outControlWeight: {x: 1.375000, y: 0.000000}
+                  - time: 1.416667
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.416667, y: 0.000000}
+                      outControlWeight: {x: 1.416667, y: 0.000000}
+                  - time: 1.458333
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.458333, y: 0.000000}
+                      outControlWeight: {x: 1.458333, y: 0.000000}
+                  - time: 1.500000
+                    value:
+                      data: 0.000000
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.000000}
+                      outControlWeight: {x: 1.500000, y: 0.000000}
+        - Scale:
+            - X:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.962057
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.962057}
+                      outControlWeight: {x: 0.000000, y: 0.962057}
+                  - time: 1.500000
+                    value:
+                      data: 0.962057
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.962057}
+                      outControlWeight: {x: 1.500000, y: 0.962057}
+            - Y:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.066363
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.066363}
+                      outControlWeight: {x: 0.000000, y: 0.066363}
+                  - time: 1.500000
+                    value:
+                      data: 0.066363
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.066363}
+                      outControlWeight: {x: 1.500000, y: 0.066363}
+            - Z:
+                keyFrames:
+                  - time: 0.000000
+                    value:
+                      data: 0.059869
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 0.000000, y: 0.059869}
+                      outControlWeight: {x: 0.000000, y: 0.059869}
+                  - time: 1.500000
+                    value:
+                      data: 0.059869
+                      leftTangent: Linear
+                      rightTangent: Linear
+                      weightedMode: Absolute
+                      inControlWeight: {x: 1.500000, y: 0.059869}
+                      outControlWeight: {x: 1.500000, y: 0.059869}
+  Events:
+    - time: -340282346638528859811704183484516925440.000000
+      value: BEGIN
+    - time: 340282346638528859811704183484516925440.000000
+      value: END
+  RotationMode: Quaternion

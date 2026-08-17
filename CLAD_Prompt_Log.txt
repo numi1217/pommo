@@ -1,0 +1,452 @@
+DESK COMPANION — CLAD AI-ASSISTED WORKFLOW / PROMPT LOG
+=========================================================
+Project: Desk Companion (AR focus-timer Lens for Spectacles)
+Built in: Lens Studio, with a parallel downgrade target for Spectacles (2024) / Lens Studio 5.15.4
+AI collaborator: Claude (via CLAD — the Lens Studio agent toolkit), through the Claude Code CLI
+connected live to Lens Studio via MCP (Model Context Protocol) tools.
+
+This log documents the prompts given to the AI and a summary of the AI-assisted actions taken in
+response, as part of an iterative build/test/refine workflow. It is organized into two parts:
+
+  PART A — Earlier development session (SUMMARIZED, not verbatim). This session's raw transcript
+           was not available when compiling this log; the description below is reconstructed from
+           a system-generated summary of that session, not the original prompts word-for-word.
+
+  PART B — This session (VERBATIM). Every user prompt below is quoted exactly as given.
+
+NOTE ON REDACTION: Any API key, bearer token, or credential that appeared in this conversation
+(Lens Studio MCP server tokens, OpenAI/Snap/Google API tokens used by RemoteServiceGateway) has
+been removed from this log and replaced with [REDACTED]. No functional project files reference
+this log — actual credentials remain only inside the Lens Studio project's own Inspector fields,
+not in this document.
+
+
+=========================================================
+PART A — EARLIER SESSION (summarized)
+=========================================================
+
+The initial build of Desk Companion was created and iterated on in an earlier AI-assisted session
+in Lens Studio 5.23. Work in that session, as reconstructed from a summary, covered:
+
+- Building the core experience flow: place the companion on a detected surface, a 10-second
+  gaze-calibration step, a spoken/typed task prompt, an AI-powered task breakdown (via
+  RemoteServiceGateway + OpenAI) into 3 subtasks, a mission board, a focus-timer stepper, and a
+  countdown session with gaze- and on-device-ML-based distraction detection.
+- Building the creature ("DeskCompanion") body, tinting/rim-glow visuals, and a typewriter-style
+  dialogue/hint UI system, all constructed at runtime from primitives and SpectaclesUIKit
+  components rather than hand-authored scenes, for portability.
+- Diagnosing and fixing a body-facing rotation bug traced to an undocumented axis convention in
+  the Lens Studio `quat.lookAt` API.
+- General iteration on distraction-detection tuning, book/prop visibility tied to the focus
+  session lifecycle, and material/tint exclusions for specific creature sub-objects (e.g. a face
+  mesh and an embedded book prop).
+- Initial planning for a Lens Studio 5.23 -> 5.15.4 downgrade (for Spectacles 2024 device
+  compatibility), captured as a standing project note but not yet executed.
+
+
+=========================================================
+PART B — THIS SESSION (verbatim prompt log)
+=========================================================
+
+--- PROMPT 1 ---
+"1. yes i dont want the book object get gradient tint and outline, fix it (but i want to put the
+book in front of that character)
+2. just make the timer very very slightly above the character, not way too far"
+
+AI actions: Excluded the BOOK object (and its full sub-hierarchy) from the creature's tint/rim-glow
+material treatment by generalizing a single-object equality check into an ancestor-chain check.
+Reduced the countdown timer's clearance above the creature from 70cm to 15cm per user feedback
+after reviewing a screenshot.
+
+
+--- PROMPT 2 ---
+"1. make book only appear after start focusing (disapper after finished the session)
+2. if im going to downgrade later, is there any thing i need to care about or is broken?"
+
+AI actions: Added a setBookVisible() method tying the book prop's visibility and animation
+playback to the start/end of a focus countdown. Delivered a pre-downgrade risk assessment
+covering non-portable APIs, package version risks, and material/shader migration concerns for a
+future 5.23 -> 5.15.4 move.
+
+
+--- PROMPT 3 ---
+"ok could you try to downgrade?"
+
+AI actions: Began the Lens Studio 5.23 -> 5.15.4 downgrade following an internal migration
+playbook: copied the project to a new "SPEC-515" tree, audited/rewrote non-portable API calls
+(SceneObject.getComponentsInDescendants, which doesn't exist in 5.15; global setTimeout, replaced
+with a native DelayedCallbackEvent-based helper), and began package compatibility work.
+
+
+--- PROMPT 4 (tool selection) ---
+"Sync current files now (Recommended)" — selected in response to an AI clarifying question about
+whether to sync current source files into the (at that point stale) SPEC-515 copy.
+
+
+--- PROMPT 5 ---
+[Pasted a second Lens Studio MCP server connection configuration, pointing at a locally running
+5.15.4 Lens Studio instance. Connection details, including a bearer token, are omitted from this
+log — see redaction note above.]
+"add this and do those things for me"
+
+AI actions: Registered the second MCP connection (distinct key so the existing 5.23 connection
+was preserved) and continued the downgrade: diagnosed and fixed a package-installation mixup
+where a stale, 5.22-built SpectaclesUIKit package was shadowing a newer, compatible download at
+the same file path; installed and wired RemoteServiceGateway; ported 4 UI scripts' Button imports
+to the older UIKit's shape-specific Button API.
+
+
+--- PROMPT 6 ---
+"done" — confirming the new MCP connection was live after a session restart.
+
+AI actions: Continued the downgrade using the newly available second connection: brought
+SPEC-515 to a full clean TypeScript compile, then ran a runtime smoke test that surfaced a crash
+(a required audio asset input was never wired), diagnosed and fixed it, and re-verified a clean
+run with no errors.
+
+
+--- PROMPT 7 ---
+"now look at the hireachy, make everything the same as the original projects, and run test"
+
+AI actions: Compared the SPEC (5.23) and SPEC-515 (5.15.4) scene hierarchies object-by-object,
+found and fixed several gaps in SPEC-515: a missing RemoteServiceGatewayCredentials component
+(silently breaks AI calls without it), missing dialogue/distraction audio assets, and confirmed
+several optional inputs (custom creature model, on-device phone detection) were intentionally
+left as documented no-op fallbacks rather than ported, given the risk of the custom model's
+shader graph not surviving the downgrade. Re-ran the runtime test to confirm a clean, crash-free
+result.
+
+
+--- PROMPT 8 ---
+"why my model in 515 is way too big? i already scaled down the model prefab(deskcompation) to
+0.25"
+
+AI actions: Diagnosed that the scale edit had been applied to a live Preview instance rather than
+the underlying prefab asset (the creature is rebuilt fresh from the prefab asset on every run, so
+instance-level edits don't persist). Located the correct prefab file and asset ID, but found the
+live MCP connection to the 5.15.4 project was temporarily unreachable, and reported this rather
+than guessing at a fix.
+
+
+--- PROMPT 9 ---
+[Pasted the same second MCP server connection configuration again.]
+"yeah can u do it? though what i tried is to scale down in the asset panel"
+
+AI actions: Confirmed the connection was back up, re-verified the prefab file still showed the
+old scale, and applied the scale fix directly to the correct prefab asset via a live property
+edit (after finding the standard scene-mutation tool didn't reach objects nested inside a prefab
+asset, and using a direct, verified file edit instead). Re-compiled to confirm no regressions.
+
+
+--- PROMPT 10 ---
+"1. now it's still too big in the real world. i want it looks maybe 15cm big in the world
+2. the text is a bit unclear to see. scale up the text, and make sure not to overflow the ui
+panel box
+3. could you make the countdown of calibration in the middle of the ring? and then scale the
+number to 5 times bigger
+
+do for both 5.15 and 5.23"
+
+AI actions: Measured the creature's actual bounding geometry (shared between both projects) and
+computed a precise scale factor for a ~15cm target, applying it to both projects. Repositioned
+and enlarged the calibration countdown number to sit centered in the progress ring. Reworked
+every UI label across 5 popup panels to use Lens Studio's world-space-rect + wrap/shrink text
+overflow protection, so increased font sizes can never visually spill outside their panel/button,
+regardless of dynamic text length. Verified clean compiles in both projects.
+
+
+--- PROMPT 11 ---
+"1. the character size is not changed in 515
+2. the book animation is not working in 515
+3. in 515, scale down the calibration countdown number a bit, mayber just 4 times bigger than the
+origin"
+
+AI actions: Found that a second, similarly-named prefab file existed in SPEC-515 (created from a
+newer content import) and was the one actually wired into the scene — meaning the earlier scale
+fix had landed on an orphaned, unused file. Corrected the scale on the right file. Added
+temporary debug logging to trace the book's animation-detection logic live, confirmed detection
+itself was working correctly, and identified the actual cause as a too-short animation clip time
+range (independently corrected by the user mid-investigation); also removed a redundant
+autoplay setting that could conflict with the code's explicit playback trigger, and removed the
+temporary debug logging afterward. Adjusted the calibration countdown to 4x scale as requested.
+
+
+--- PROMPT 12 ---
+"why's the ml part?" [sic — "where's the ml part?"]
+
+AI actions: Investigated the on-device phone-detection ML feature's status in SPEC-515: located
+and copied the missing ML model file, created the required scene object and component, but found
+that assigning the model to the ML component (and its associated auto-configuration step) wasn't
+achievable through the available remote tooling for that Lens Studio version, and reported this
+limitation clearly along with what had and hadn't been completed.
+
+
+--- PROMPT 13 ---
+"1. the character size is not changed in 515
+2. the book animation is not working in 515
+3. in 515, scale down the calibration countdown number a bit, mayber just 4 times bigger than the
+origin"
+[Note: this is a near-duplicate of Prompt 11, resent by the user.]
+
+
+--- PROMPT 14 ---
+"the task asking part, the text are seperated too much, they are far away
+and scale all the text size to 1.5x (apart from the calibration countdown
+and, in the end, when i finished one session a blank ui panel floating in front of the task menu,
+try to fix that
+also, when i look at my work space in the focusing session, i kept hearing the notification
+sounds, almost once every 2 seconds. fix that"
+
+AI actions: Tightened the vertical spacing of the task-input popup's labels. Applied a uniform
+1.5x text-size increase across every UI panel except the calibration countdown. Diagnosed and
+fixed a genuine logic bug in the distraction-detection state machine: a recovery timer wasn't
+being reset when a distraction was flagged, letting a persistent false-positive signal snap back
+to "focused" almost instantly and re-trigger the alert every few seconds; added a symmetric reset
+plus a minimum interval between repeated alerts. Applied all fixes to both projects and verified
+clean compiles.
+
+
+--- PROMPT 15 ---
+"1. well maybe the text should be only 1.2x
+2. is the eye-gazing -25 to +25 angle still working? i felt like it's rarely triggerd while
+testing
+3. could you check if the phone detection still working properly for me? it's trigged often
+while on device testing
+4. move the ai listening UI above a bit, it's overlapped with creature now
+5. the finish menu, the text on the top also a bit overlapped with the options below"
+
+AI actions: Reduced the text-size multiplier from 1.5x to 1.2x across all panels. Reviewed the
+gaze-detection logic, found it structurally unchanged and still functioning as designed, and
+identified that the newly-added alert-cooldown from Prompt 14 (which throttles the sound/hint
+only, not the underlying visual tint) was the most likely cause of it feeling less frequent;
+reduced that cooldown. Reviewed the on-device phone-detection wiring for bugs (found none) and,
+given the reported real-world false-positive rate, raised the detection confidence threshold as
+a conservative mitigation, flagging that a full fix would need live on-device probability
+readings to properly recalibrate. Fixed a layout gap causing the AI task-listening panel to
+overlap the (now much smaller) creature by increasing its fixed vertical clearance. Fixed a
+genuine box-overlap in the mission board's title label versus the card list beneath it. Applied
+all fixes to both projects and verified clean compiles.
+
+
+--- PROMPT 16 (this prompt) ---
+"CLAD prompt log Include a text file, transcript, or document showing the prompts and
+AI-assisted workflow used to help create your project with CLAD. i need to do this for the
+competition can you make a version that doenst include my api keys"
+
+AI actions: Generated this document.
+
+
+=========================================================
+PART C — A LATER SESSION (verbatim)
+=========================================================
+NOTE: this part is a separate Claude Code conversation from Part B above (same project, later
+session — the AI has no memory of Part B's conversation itself, only of the project files it
+left behind). Feature work in this part (the gradient sphere, the mesh/prefab extension point,
+the calibration ring) predates and is unrelated to the task-breakdown/distraction-detection
+features already described in Parts A and B; the two sessions were exploring different areas of
+the same project.
+
+--- PROMPT 1 ---
+"check mcp connection"
+
+AI actions: Verified the Lens Studio MCP connection was live by calling ListAllPanels and
+confirming the editor returned its active panel list.
+
+
+--- PROMPT 2 ---
+"create a gradient color for the sphere. #EEAECA and #94BBE9 and 50% 50%"
+
+AI actions: Found no sphere existed in the scene yet and confirmed with the user before creating
+one. Built a new sphere object and a code-node shader-graph material for it; after the user
+pointed out the result read as a hard-edged 50/50 split rather than a gradient, rebuilt it as a
+true linear-gradient SVG converted to a texture and reapplied it, verifying the smoother result
+via a runtime preview capture.
+
+
+--- PROMPT 3 ---
+"help me check if this new sphere is the sphere which will be placed on the plane after user
+pinch? if not, replace it"
+
+AI actions: Traced the pinch-to-place code path and found the demo sphere was unrelated — the
+real creature is built procedurally at runtime (buildSphereVisual() in DeskCompanionCreature.ts /
+MeshPrimitives.ts), tinted with a flat focus-state color and no texture. After confirming the
+user wanted the gradient applied there instead (as a portable baseTex texture, keeping the
+existing focus-state tint), added UV-coordinate generation to the shared MeshBuilder vertex
+layout (previously position/normal/color only), wired a new creatureGradientTexture input through
+DeskCompanionMain to the creature, and verified the UV mapping on the real mesh-building code path
+via a throwaway test object before deleting it. Removed the now-unused standalone demo sphere and
+material.
+
+
+--- PROMPT 4 ---
+"where is the gradient? now it's sperated two colors"
+
+AI actions: Rebuilt the texture as a true smooth linear gradient (SVG <linearGradient>) instead of
+two hard-edged color blocks, re-pointed the material at the new texture, and verified the result.
+
+
+--- PROMPT 5 ---
+"can you change that spehe into a mesh or something? bcos later i want to replace with my owe
+created obj or fbx file with animation"
+
+AI actions: Added an optional creatureModelPrefab (ObjectPrefab) input on DeskCompanionMain;
+DeskCompanionCreature now instantiates that prefab as the body when provided, falling back to the
+existing procedural gradient sphere when left empty. Generalized focus-state color tinting to walk
+whatever RenderMeshVisual(s) the body actually has (sphere today, any future custom model) rather
+than assuming one hardcoded material, with a safe no-op fallback if a custom model's shader has no
+baseColor property. Verified via a clean recompile and the existing focus-state-smoke LEAF test.
+
+
+--- PROMPT 6 ---
+"tell me if im going to implement the distraction detection, what kinds of approach will you use?"
+
+AI actions: Design discussion, no code changes — recommended a head-pose/gaze-proximity heuristic
+(comparing the camera's live forward vector against a calibrated baseline) as the lightweight,
+portable option, versus a heavier on-device SnapML classifier as a more accurate but more complex
+alternative.
+
+
+--- PROMPT 7 ---
+"yes, now add these: 1. once placement sphere finished, a ui text pop up to make user look at the
+workplace for 10 sec (or the appropriate time for calibrate the baseline position), crated a
+loading ring UI for the calibration process , then once it finished, then user can back to choose
+the timer setting."
+
+AI actions: Added a new Calibrating phase between placement and timer setup. Built a new
+DeskCompanionCalibrationUI (instruction label, a 24-segment loading ring, live seconds-remaining
+label) using the same MeshBuilder + Text3D pattern as the existing timer popup. Wired
+DeskCompanionMain to sample the camera's forward vector every frame during the 10-second window,
+average it into a baselineForward reference (exposed via getBaselineForward() for the future
+distraction detector discussed in Prompt 6), drive the ring's progress, then hand off to the
+existing timer-setup UI. Updated the LEAF placement scenario's assertions for the new three-phase
+sequence and verified the full flow via direct runtime state inspection (phase transitions, ring
+pip enabled-state and layout), since the 10-second wait exceeded the LEAF-run tool's round-trip
+timeout.
+
+
+--- PROMPT 8 ---
+"if i want to do the task breakdown feature (user talk about the task they want to achieve, then
+the sphere help with breakdown the task into 3 smaill tasks, then user choose one task then choose
+the time to start focus), what kind of technique is used behind this?"
+
+AI actions: Design discussion, no code changes — outlined the likely technique stack (ASR Module
+for voice capture, a Remote Service Gateway LLM call for the actual breakdown reasoning, a
+procedural choice panel matching the existing UI pattern) and the connectivity/latency/privacy
+tradeoffs of the remote-LLM step.
+
+
+--- PROMPT 9 (this prompt) ---
+"CLAD prompt log Include a text file, transcript, or document showing the prompts and
+AI-assisted workflow used to help create your project with CLAD. i need to do this for the
+competition
+
+there's already a prompt log, maybe combine with it"
+
+AI actions: Appended this session's verbatim prompt log as this Part C, in the same format as the
+rest of the document, rather than creating a separate file.
+
+
+=========================================================
+PART D — A LATER SESSION (verbatim)
+=========================================================
+NOTE: this part is a separate Claude Code conversation from Parts B and C above (same project,
+later session — the AI has no memory of the earlier conversations, only of the project files and
+CLAD_Prompt_Log.txt left behind). No credentials appeared in this session, so no redaction was
+needed.
+
+--- PROMPT 1 ---
+"can this lens studio project down to 5.15 later?"
+
+AI actions: Loaded the spectacles-522-portable-design skill and inspected the project (Lens
+Studio 5.23.1, Specs Base Template, targeting Spectacles; only an unedited stub script and
+template render assets present at the time). Explained that yes, a later downgrade is very
+achievable, and summarized the portable-design rules that keep it cheap: build the scene from
+code at runtime rather than hand-authoring in the editor, use ImageMaterialPreset base materials
+with all state set in code on clones, avoid non-portable custom shaders, and stay within the
+5.15 API/package surface.
+
+--- PROMPT 2 ---
+"yes, i will downgrade this projects finally to test on the device"
+
+AI actions: Saved a persistent memory note recording that this project will eventually be
+downgraded to LS 5.15.4 for Spectacles (2024) device testing, so future sessions default to
+portable choices without being re-told.
+
+--- PROMPT 3 ---
+"I want to build a AR experiecnce in lens studio where small companion creature that sits on the
+user's desk during a work session and reacts (without ever punishing) to whether the user seems
+focused or distracted. first, set up World/Surface Tracking so a 3D sphere object can be placed
+on a detected desk/flat surface by pinch. Then, once it's placed, a timmer setting screen ui
+popup, (-/+ stepper, 5-25 min range) default is 5 mins, and a confirm btn below. then the timer
+start couting down"
+
+AI actions: Routed the request through the lens-studio-router skill (project/MCP/sign-in gate,
+platform resolved to Specs from the project's targetPlatform), then delegated to the
+specs-experience-builder agent. It built: DeskCompanionMain (creature.ts) as the root
+orchestrator with a PlacingSurface -> SettingTimer -> CountingDown -> Complete state machine and
+WorldQueryModule-based pinch placement; DeskCompanionCreature (a procedural sphere body with a
+setFocusState extension point deliberately left uncalled, for a future focus/distraction
+detector); DeskCompanionTimerUI (a -/+ minute stepper clamped 5-25, default 5, and a Confirm
+button) built from MeshBuilder + Text3D + TapInteraction rather than SpectaclesUIKit, to stay
+5.15-portable; plus MeshPrimitives/Text3DHelpers/TapInteraction helpers. The builder's own preview
+verification caught and fixed a mirrored-text/button-layout bug (a lookAt-based billboard was
+producing a 180-degree yaw). Confirmed a clean compile and no runtime errors.
+
+--- PROMPT 4 ---
+"how does leaf work? you can try to use that first"
+
+AI actions: Explained LEAF (Live Lens Tester) as an in-preview integration-test framework that
+drives real interaction handlers via scripted scenarios, then delegated to the live-lens-tester
+agent. It installed the LEAF package (v2.0.2, matching the project's SIK 0.18.0), wrote 6
+scenarios plus a custom interactor and LeafIndex, and ran them: 1 of 6 passed (a focus-state smoke
+test); the other 5 failed because the root controller's raw HandInputData pinch listener could not
+be reliably driven by LEAF's simulated hand or PreviewInteractTool in Editor Preview.
+
+--- PROMPT 5 (tool selection) ---
+"Add a debug placement hook (Recommended)" — selected in response to an AI clarifying question
+about how to handle the LEAF-untestable pinch-placement step.
+
+AI actions: Added an editor-only DebugPlacementTrigger to creature.ts/DeskCompanionMain — a
+tappable SIK Interactable gated behind isEditor() (zero effect on-device) that floats in front of
+the preview camera and invokes the exact same onPinch() -> hit-test -> placeCompanion() path a
+real pinch would. Verified a clean recompile, then re-delegated to the live-lens-tester agent to
+rewire its interactor onto the new trigger and re-run all 6 scenarios. That run surfaced a new,
+unrelated root cause: any camera pose that would produce a real WorldQueryModule hit appeared to
+hang the hit-test callback indefinitely, while poses that missed resolved normally — 1 pass
+(focus-state-smoke) / 5 fail, all downstream of that hang.
+
+--- PROMPT 6 ---
+"when will it finish?"
+
+AI actions: Gave a status update on the still-running background LEAF verification agent (no
+fixed ETA available; explained what it was doing and that a completion notification would arrive
+automatically).
+
+--- PROMPT 7 (tool selection) ---
+"Skip further preview verification" — selected in response to an AI clarifying question about how
+to proceed after the background LEAF re-run reported the hit-test hang.
+
+AI actions: Before accepting that answer, manually drove the preview directly via
+PreviewInteractTool/QueryRuntimeSceneTool/MovePreviewCamera (bypassing LEAF entirely) to isolate
+the cause. Reproduced the identical symptom outside of LEAF, then traced it to the LEAF plugin
+process itself being stuck in a background loop — repeatedly reloading its settings,
+re-registering scenarios, and resetting the live Lens roughly once per second (confirmed via log
+timestamps and by watching scene-object uniqueIds change between queries) — which tears down the
+runtime scene before the async surface hit-test can ever complete; not a bug in the placement
+code itself. Reported this finding and asked how to proceed; per the user's answer above, stopped
+further preview verification and summarized what was confirmed working (the SIK trigger path, the
+focus-state hook) versus what remains open (placement and everything downstream of it), pending
+either a Lens Studio restart or on-device testing.
+
+--- PROMPT 8 (this prompt) ---
+"CLAD prompt log Include a text file, transcript, or document showing the prompts and
+AI-assisted workflow used to help create your project with CLAD.
+
+there's already one file so combine with it (can place in order)"
+
+AI actions: Appended this session's verbatim prompt log as this Part D, in the same format as the
+rest of the document.
+
+=========================================================
+END OF LOG
+=========================================================

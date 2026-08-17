@@ -1,0 +1,112 @@
+- !<AssetImportMetadata/1ed01f6f-97f9-43eb-9b1b-8def97b23deb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1248e5d4-f3cd-4ce4-abc6-bf53d9f1284b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1248e5d4-f3cd-4ce4-abc6-bf53d9f1284b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fec4430a-0012-4777-89d4-7adc80eedca3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fec4430a-0012-4777-89d4-7adc80eedca3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6113f4da-c771-43b6-a4aa-6b22ba94a8f5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseMaterial: false
+    bookPencilPrefab: false
+    creatureGradientTexture: false
+    creatureModelPrefab: false
+    debugColliders: false
+    dialogueChirp0: false
+    dialogueChirp1: false
+    dialogueChirp2: false
+    distractionMessage: false
+    distractionSfx: false
+    faceFrame0: false
+    faceFrame1: false
+    faceFrame2: false
+    faceFrame3: false
+    faceFrame4: false
+    fresnelBrightness: false
+    phoneClassIndex: false
+    phoneDetectionThreshold: false
+    phoneDistractionMessage: false
+    phoneMlComponent: false
+    sessionCompleteSfx: false
+    textMaterial: false
+    uiFont: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - baseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      textMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      creatureGradientTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      creatureModelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      fresnelBrightness: 1.500000
+      faceFrame0: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      faceFrame1: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      faceFrame2: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      faceFrame3: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      faceFrame4: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      bookPencilPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      dialogueChirp0: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      dialogueChirp1: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      dialogueChirp2: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      uiFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      debugColliders: false
+      distractionSfx: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      sessionCompleteSfx: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      distractionMessage: "Still with me?"
+      phoneDistractionMessage: "Distracted by phone?"
+      phoneMlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      phoneClassIndex: !<float> 1.000000
+      phoneDetectionThreshold: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Material baseMaterial {"hint":"Base material clone source (ImageMaterialPreset) — used for the creature body and all UI panel/button geometry. Every clone sets its own baseColor/blendMode/depthTest/depthWrite in code (5.15 clone() resets Inspector values)."}'
+    - '// @input Asset.Material textMaterial {"hint":"Material clone source for Text3D labels (Text3DMaterialPreset)."}'
+    - "// @input Asset.Texture creatureGradientTexture {\"hint\":\"Pink-to-blue gradient texture applied to the creature body's baseTex (still tinted per focus state via baseColor multiply). Ignored when creatureModelPrefab is set.\"}"
+    - '// @input Asset.ObjectPrefab creatureModelPrefab {"hint":"Optional creature body override — an imported FBX/OBJ prefab (with its own animation, if any). Leave empty to use the procedural gradient sphere. Drop your own model in here later; no code changes needed."}'
+    - "// @input float fresnelBrightness = 1.5 {\"hint\":\"Brightness of the light-yellow fresnel/rim glow around the creature's silhouette. 1.0 = base color, higher = brighter/more blown-out. Live-tweakable — drag this during Preview to see the change immediately, no recompile needed.\"}"
+    - "// @input Asset.Texture faceFrame0 {\"hint\":\"Face expression sequence, frame 1 of 5 — the resting/eyes-open look (held between blinks). Applied to the child SceneObject named 'face' inside creatureModelPrefab. Leave all 5 empty to skip the face feature entirely.\"}"
+    - '// @input Asset.Texture faceFrame1 {"hint":"Face expression sequence, frame 2 of 5 (blink, partway closing)."}'
+    - '// @input Asset.Texture faceFrame2 {"hint":"Face expression sequence, frame 3 of 5 (blink, eyes closed)."}'
+    - '// @input Asset.Texture faceFrame3 {"hint":"Face expression sequence, frame 4 of 5 (blink, partway opening)."}'
+    - '// @input Asset.Texture faceFrame4 {"hint":"Face expression sequence, frame 5 of 5 — back to eyes-open (typically identical or near-identical to frame 1)."}'
+    - '// @input Asset.ObjectPrefab bookPencilPrefab {"hint":"Optional desk prop shown only during the focus countdown (e.g. a book + pencil model/animation) — instantiated hidden at startup, enabled when a timer is confirmed and disabled again when that countdown ends. If the prop has an AnimationPlayer component, playAll()/stopAll() fires on the same show/hide edges. Leave empty to skip the feature entirely; drop a prefab in here later, no code changes needed."}'
+    - "// @input Asset.AudioTrackAsset dialogueChirp0 {\"hint\":\"Creature-voice chirp variant 1/3 — a short synthesized murmur/blip, retriggered rapidly (randomized between the 3 variants) in sync with the intro dialogue's typewriter text reveal. Leave all 3 empty for silent typing.\"}"
+    - '// @input Asset.AudioTrackAsset dialogueChirp1 {"hint":"Creature-voice chirp variant 2/3."}'
+    - '// @input Asset.AudioTrackAsset dialogueChirp2 {"hint":"Creature-voice chirp variant 3/3."}'
+    - '// @input Asset.Font uiFont {"hint":"Font asset used by every Text3D label in the popup and the countdown display."}'
+    - '// @input bool debugColliders {"hint":"Wireframe-render the placement/UI hit colliders — debug only, off by default."}'
+    - '// @input Asset.AudioTrackAsset distractionSfx {"hint":"One-shot sound played when the creature notices distraction (gaze deviates from the calibrated baseline for DISTRACTION_SUSTAIN_SECONDS). Still a placeholder — swap for a warmer, custom-generated cue once /build-sfx can run (needs Node.js)."}'
+    - '// @input Asset.AudioTrackAsset sessionCompleteSfx {"hint":"One-shot celebratory sound played once, when every mission subtask is done (CompanionPhase.Complete). Gentle, never punishing — this is a reward cue, not a nag. Leave empty to skip the feature."}'
+    - '// @input string distractionMessage = "Still with me?" {"hint":"Text shown (with typewriter effect + voice) when distraction is triggered by gaze deviating from the calibrated baseline. Edit freely — this is the only place this wording lives."}'
+    - '// @input string phoneDistractionMessage = "Distracted by phone?" {"hint":"Text shown instead of distractionMessage when distraction is specifically triggered by the phone-presence classifier (phoneMlComponent) being sustained for DISTRACTION_SUSTAIN_SECONDS. Edit freely."}'
+    - '// @input Component.MLComponent phoneMlComponent {"hint":"MLComponent running the on-device phone-presence classifier (PhoneDetectionML SceneObject). Leave empty to disable phone detection — gaze-based distraction still works on its own."}'
+    - "// @input float phoneClassIndex = 1 {\"hint\":\"Index into the classifier's 2-class softmax output ('probabilities': [class0, class1]) that corresponds to 'phone present'. Verify empirically — training class order isn't guaranteed.\"}"
+    - "// @input float phoneDetectionThreshold = 0.93 {\"hint\":\"Minimum softmax probability at phoneClassIndex to count as 'phone visible'. Originally 0.85, calibrated against one static hand-with-no-phone test image (~0.66) vs. a genuine phone photo (~0.9999). Raised to 0.93 after on-device testing showed frequent false positives — a real desk scene (lighting, clutter, hand poses) apparently reads higher than that single test image did. Re-tune from live readings if it's still over- or under-triggering.\"}"
