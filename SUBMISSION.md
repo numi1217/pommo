@@ -2,15 +2,11 @@
 
 ## Public project repository
 
-`PUBLIC_REPO_LINK` — fill in once this project has a git remote and has been pushed. (Before
-pushing: confirm `Assets/Scene.scene`'s `RemoteServiceGatewayCredentials` token fields are
-blank — see `SETUP.md`.)
+[https://github.com/numi1217/pommo](https://github.com/numi1217/pommo)
 
 ## Demo video
 
-Add the public Google Drive, Dropbox, YouTube, or WeTransfer URL here after recording:
-
-`DEMO_VIDEO_LINK`
+[https://drive.google.com/file/d/1h3hAz8_390MGUc7NUBJ5ETP790CQgbst/view?usp=sharing](https://drive.google.com/file/d/1h3hAz8_390MGUc7NUBJ5ETP790CQgbst/view?usp=sharing)
 
 For a better on-device demo experience, this project was downgraded from Lens Studio 5.23 to
 5.15.4 to record directly on Spectacles hardware — see `REBUILD.md` for the portability notes
